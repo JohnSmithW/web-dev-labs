@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
-body {
+body 
+{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.header {
+.header 
+{
     width: 100%;
 }
 
-.header-container {
+.header-container 
+{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -18,17 +21,20 @@ body {
     box-sizing: border-box;
 }
 
-.logo {
+.logo
+{
     object-fit: contain;
 }
 
-.nav {
+.nav
+{
     display: flex;
     align-items: center;
     margin: 0 99px
 }
 
-.nav--link {
+.nav--link
+{
     margin-right: 87px;
     font-weight: 500;
     font-size: 16px;
@@ -38,11 +44,13 @@ body {
     white-space: nowrap;
 }
 
-.nav--link:last-child {
+.nav--link:last-child 
+{
     margin-right: 0;
 }
 
-.button {
+.button 
+{
     border: none;
     width: 100%;
     height: 55px;
@@ -58,55 +66,65 @@ body {
     cursor: pointer;
 }
 
-.nav--button {
+.nav--button 
+{
     max-width: 247px;
 }
 
-.promo--button {
+.promo--button 
+{
     max-width: 332px;
 }
 
-.button:hover {
+.button:hover 
+{
     background: #32393d;
 }
 
-.promo {
+.promo
+{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.promo-wrapper {
+.promo-wrapper
+{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.promo--img {
+.promo--img 
+{
     width: 100%;
     object-fit: cover;
 }
 
-.title {
+.title 
+{
     font-weight: 600;
     font-size: 6rem;
     line-height: 122.35%;
     color: #000;
 }
 
-.text {
+.text 
+{
     font-weight: 400;
     font-size: 26px;
     line-height: 120%;
     color: rgba(0, 0, 0, 0.7);
 }
 
-.title_pink {
+.title_pink 
+{
     color: #EE58B6;
 }
 
-.features {
+.features 
+{
     display: flex;
     justify-content: center;
     background: #000;
@@ -114,16 +132,19 @@ body {
     box-sizing: border-box;
 }
 
-.features--item {
+.features--item 
+{
     margin: 0 30px;
 }
 
-.features--img {
+.features--img 
+{
     max-width: 60px;
     object-fit: contain;
 }
 
-.features--text {
+.features--text
+{
     font-weight: 400;
     font-size: 1.375rem;
     line-height: 120%;
@@ -131,7 +152,8 @@ body {
     text-align: center;
 }
 
-.about {
+.about 
+{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -140,42 +162,49 @@ body {
     box-sizing: border-box;
 }
 
-.about--item {
+.about--item 
+{
     margin: 20px 0;
 }
 
-.about-wrapper {
+.about-wrapper 
+{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.about--img {
+.about--img
+{
     width: 100%;
     object-fit: cover;
 }
 
-.about--title {
+.about--title 
+{
     font-size: 3rem;
     line-height: 126.06%;
     color: #0004;
 }
 
-.about--text {
+.about--text 
+{
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 135%;
     color: rgba(0, 0, 0, 0.7);
 }
 
-.course {
+.course 
+{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.course--title {
+.course--title
+{
     font-size: 48px;
     line-height: 59px;
     text-align: center;
@@ -183,18 +212,21 @@ body {
     margin-bottom: 50px;
 }
 
-.course--title_pink {
+.course--title_pink 
+{
     color: #EE58B6;
 }
 
-.course-container {
+.course-container 
+{
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.course-card {
+.course-card
+{
     width: 100%;
     max-width: 358px;
     height: 190px;
@@ -204,19 +236,22 @@ body {
     box-sizing: border-box;
 }
 
-.course--icon {
+.course--icon 
+{
     max-width: 40px;
     object-fit: contain;
 }
 
-.course--text {
+.course--text 
+{
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 21px;
     color: #fff;
 }
 
-.footer {
+.footer 
+{
     width: 100%;
     background: #000;
     display: flex;
@@ -226,36 +261,44 @@ body {
     box-sizing: border-box;
 }
 
-.container {
+.container
+{
     width: 100%;
     max-width: 1580px;
 }
 
-.container_sm {
+.container_sm
+{
     max-width: 1135px;
 }
 
-.container_xl {
+.container_xl
+{
     max-width: 1680px;
 }
 
-.wrapper {
+.wrapper
+{
     display: flex;
     align-items: center;
 }
 
-.wrapper_justify-center {
+.wrapper_justify-center 
+{
     justify-content: center;
 }
 
-.wrapper_justify-between {
+.wrapper_justify-between 
+{
     justify-content: space-between;
 }
 
-.wrapper_flex-column {
+.wrapper_flex-column 
+{
     flex-direction: column;
 }
 
-.section {
+.section 
+{
     margin: 20px 0;
 }
