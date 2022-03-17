@@ -9,6 +9,9 @@ body
 .header 
 {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-container 
@@ -274,7 +277,7 @@ body
 
 .container_xl
 {
-    max-width: 1680px;
+    max-width: 1600px;
 }
 
 .wrapper
