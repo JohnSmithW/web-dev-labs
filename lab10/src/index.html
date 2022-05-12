@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./index.css" />
+  <title>Home</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-container container">
+      <img src="./images/logo.svg" alt="" class="logo" />
+      <input type="checkbox" class="burger__checkbox" id="burger__checkbox" />
+      <label class="burger" for="burger__checkbox">
+        <div class="burger__item"></div>
+      </label>
+      <div class="header-wrapper">
+        <nav class="nav">
+          <a href="#" class="nav__link">Что будет на курсе?</a>
+          <a href="#" class="nav__link">Вопросы</a>
+          <a href="#" class="nav__link">Автор</a>
+        </nav>
+        <button type="button" class="button nav__button button_pop-up">
+          Записаться на курс
+        </button>
+      </div>
+    </div>
+  </header>
+  <section class="section">
+    <div class="container">
+      <div class="promo">
+        <div class="promo-block">
+          <h1 class="title">
+            Не <span class="title title_pink">делай</span> это
+          </h1>
+          <p class="text">
+            Онлайн-курс для творческих людей, о том, как управлять своим
+            временем
+          </p>
+          <button type="button" class="button promo__button button_pop-up">
+            Записаться на курс
+          </button>
+        </div>
+        <div class="promo-wrapper">
+          <img src="./images/person.png" alt="" class="promo__img" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section features">
+    <div class="container container_sm features-container">
+      <div class="wrapper wrapper_flex-column features__item">
+        <img src="./images/icons/clock.svg" alt="" class="features__icon" />
+        <p class="features__text">
+          Для тех, у кого слишком много идей и слишком мало времени
+        </p>
+      </div>
+      <div class="wrapper wrapper_flex-column features__item">
+        <img src="./images/icons/copybook.svg" alt="" class="features__icon" />
+        <p class="features__text">
+          Метод «списка не дел», который позволит успевать и реализовывать
+        </p>
+      </div>
+      <div class="wrapper wrapper_flex-column features__item">
+        <img src="./images/icons/target.svg" alt="" class="features__icon" />
+        <p class="features__text">
+          Курс научит творческих людей сосредоточиваться
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="section about">
+    <div class="container container_sm">
+      <div class="wrapper wrapper_justify-between about__item about__item_reversed">
+        <div class="about-wrapper">
+          <img src="./images/finances.png" alt="" class="about__img" />
+        </div>
+        <div class="wrapper wrapper_flex-column about-block">
+          <h3 class="about__title">Ты не успеешь</h3>
+          <p class="about__text">
+            Всех творческих людей объединяет одна проблема - отсутствие
+            времени на реализацию идей. Как прибавить суткам часы, рассмотрим
+            в нашем курсе.
+          </p>
+        </div>
+      </div>
+      <div class="wrapper wrapper_justify-between about__item">
+        <div class="wrapper wrapper_flex-column about-block">
+          <h3 class="about__title">Опять дедлайн</h3>
+          <p class="about__text">
+            В мире, где столько всего интересного, когда же успевать жить?
+          </p>
+        </div>
+        <div class="about-wrapper">
+          <img src="./images/mindBlowing.png" alt="" class="about__img" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section course">
+    <div class="container container_sm">
+      <h3 class="course__title">
+        На курсе ты
+        <span class="course__title course__title_pink">сможешь</span>
+      </h3>
+      <div class="course-container">
+        <div class="course-card">
+          <img src="./images/icons/oneFinger.svg" alt="" class="course__icon" />
+          <p class="course__text">
+            Понять, что нужно делать, а что делать не стоит.
+          </p>
+        </div>
+        <div class="course-card">
+          <img src="./images/icons/twoFingers.svg" alt="" class="course__icon" />
+          <p class="course__text">
+            Перестать себя искусственно ограничивать.
+          </p>
+        </div>
+        <div class="course-card">
+          <img src="./images/icons/threeFingers.svg" alt="" class="course__icon" />
+          <p class="course__text">
+            Определить сильные стороны и начать использовать слабые.
+          </p>
+        </div>
+        <div class="course-card">
+          <img src="./images/icons/fourFingers.svg" alt="" class="course__icon" />
+          <p class="course__text">
+            Научиться достигать любой цели в 3 понятных шага.
+          </p>
+        </div>
+        <div class="course-card">
+          <img src="./images/icons/fiveFingers.svg" alt="" class="course__icon" />
+          <p class="course__text">
+            Сотрудничать эффективныи с правильными людьми.
+          </p>
+        </div>
+        <div class="course-card">
+          <img src="./images/icons/threeFingersAlt.svg" alt="" class="course__icon" />
+          <p class="course__text">
+            Оптимизировать общение с клиентами и проведение совещаний.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <img src="./images/logoFooter.svg" alt="" class="logo" />
+  </footer>
+
+  <div id="pop-up" class="pop-up__overlay">
+    <div id="dialog" role="dialog" class="pop-up">
+      <div class="pop-up__content">
+        <div class="pop-up__header">
+          <div class="pop-up__close"></div>
+        </div>
+
+        <div class="pop-up__body">
+          <div class="banner">
+            <img src="./images/welcome.png" alt="" class="banner__image" />
+          </div>
+          <h3 class="pop-up__title">Записаться на курс</h3>
+          <form id="form" action="" class="form">
+            <div class="form__control">
+              <input type="text" name="name" placeholder="Ваше имя" class="form__input" />
+            </div>
+            <div class="form__control">
+              <input type="email" name="email" placeholder="Email" class="form__input" />
+            </div>
+            <div class="form__control">
+              <div id="select" class="select">
+                <div class="select__item" name="test">
+                  <span id="selected" class="select__text">Деятельность</span>
+                  <img src="./images/icons/arrow.svg" alt="" class="select__icon" />
+                </div>
+                <div class="select-list">
+                  <div class="select-list__item" name="Programmer">
+                    Programmer
+                  </div>
+                  <div class="select-list__item" name="Designer">
+                    Designer
+                  </div>
+                  <div class="select-list__item" name="CEO">
+                    CEO
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <label class="checkbox" for="checkbox">
+              <input id="checkbox" type="checkbox" class="checkbox__input" />
+              <span class="checkbox__text">Согласен получать информационные материалы о старте
+                курса</span>
+            </label>
+
+            <button id="form__button" type="button" class="button nav__button">
+              Записаться на курс
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>
