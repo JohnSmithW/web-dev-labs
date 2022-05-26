@@ -10,16 +10,23 @@ const initializeApp = () => {
   const selectItem = document.querySelector('.select__item');
   const selectListItem = document.querySelectorAll('.select-list__item');
   const formButton = document.querySelector('#form__button');
+  const form = document.querySelector('.form');
+  const title = document.querySelector('.pop-up__title');
+  const banner = document.querySelector('#banner');
 
   let isPopUpOpen = false;
   let isSelectOpen = false;
 
-  const values = {
+  const VALUES = {
     name: "",
     email: "",
     occupancy: ""
   };
 
+  const validatedValues = {
+    name: false,
+    email: false
+  };
 
   const appearanceAnimation = (element) => {
     let unit = 0.5;
@@ -30,9 +37,9 @@ const initializeApp = () => {
         element.style.transform = `scale(${unit})`;
         unit += 0.1;
       } else {
-        clearInterval(interval)
+        clearInterval(interval);
       }
-    }, 1)
+    }, 1);
   }
 
   const disappearAnimation = (element) => {
@@ -61,10 +68,50 @@ const initializeApp = () => {
     isPopUpOpen = true;
   };
 
+  const handleDisable = () => {
+    const { name, email } = validatedValues;
+ 
+    if (!name || !email) {
+      formButton.classList.add('button_disabled');
+      formButton.disabled = true;
+    } else {
+      formButton.classList.remove('button_disabled');
+      formButton.disabled = false;
+    }
+  }
+
+  const validateName = (event, value) => {
+    if (!/^[a-zA-Z]+$/.test(value) || value === '') {
+      event.target.parentElement.classList.add('form__input_warning');
+      validatedValues.name = false;
+    } else {
+      event.target.parentElement.classList.remove('form__input_warning');
+      validatedValues.name = true;
+    }
+  }
+
+  const validateEmail = (event, value) => {
+    if (!value.includes('@') && !value.includes('.') || value === '') {
+      event.target.parentElement.classList.add('form__input_warning');
+      validatedValues.email = false;
+    } else {
+      event.target.parentElement.classList.remove('form__input_warning');
+      validatedValues.email = true;
+    }
+  }
+
   const handleChange = (event) => {
     const { name, value } = event.target;
+    
 
-    values[name] = value;
+    if (name === 'name') {
+      validateName(event, value);
+    }
+    if (name === 'email') {
+      validateEmail();
+    }
+
+    VALUES[name] = value;
   };
 
   window.addEventListener("keydown", (event) => {
@@ -80,7 +127,7 @@ const initializeApp = () => {
 
     selected.innerText = value;
     selected.setAttribute("name", value);
-    values.occupancy = value;
+    VALUES.occupancy = value;
 
     if (!isSelectOpen) {
       select.classList.add("select_active");
@@ -120,6 +167,7 @@ const initializeApp = () => {
   for (let index = 0; index < inputs.length; index += 1) {
     inputs[index].addEventListener('change', (event) => {
       handleChange(event);
+      handleDisable();
     });
   }
 
@@ -129,21 +177,42 @@ const initializeApp = () => {
     });
   }
 
+  const handleError = (isError) => {
+    if (isError) {
+      form.classList.add('form_hidden');
+      banner.classList.add('banner_hidden');
+      title.innerText = 'Упс.. Произошла ошибка!';
+    } else {
+      form.classList.remove('form_hidden');
+      banner.classList.remove('banner_hidden');
+      title.innerText = 'Записаться на курс';
+    }
+  }
 
   const handleSubmit = async (data) => {
-    await fetch('http://localhost:8080/lab11/server/signup.php', {
+    const formData = new URLSearchParams(Object.entries(data)).toString();
+
+    await fetch('http://localhost:8080/lab11/src/signup.php', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/x-www-form-urlencoded'
       },
       redirect: 'follow',
       referrerPolicy: 'no-referrer',
-      body: JSON.stringify(data)
-    });
+      body: formData
+    }).then((response) => {
+      if (response.status === 200) {
+        closePopUp();
+      } else {
+        handleError(true);
+      }
+    }).catch(() => {
+
+    })
   }
 
   formButton.addEventListener('click', async () => {
-    await handleSubmit({ ...values });
+    await handleSubmit({ ...VALUES });
   })
 
 }
